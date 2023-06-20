@@ -59,7 +59,7 @@
     <!-- About me -->
     <section class="container-fluid about-me pb-0 pt-lg-5 m-0 p-0">
         <div class="container-md p-0">
-            <div class="row justify-content-sm-center justify-content-lg-around container-fluid align-items-center">
+            <div class="row justify-content-sm-center m-0 justify-content-lg-around container-fluid align-items-center">
                 <h1 class="text-center fw-bold">About me</h1>
                 <img src="src/karakter.png" alt=""
                     class="karakter-about ms-sm-auto me-sm-auto col-sm-12 col-md-12 col-lg-4 mx-auto" />
@@ -100,9 +100,7 @@
                 class="row row-cols-1 row-cols-lg-4 row-cols-md-2 projects-items d-flex pt-4 justify-content-md-start justify-content-sm-center mx-sm-auto flex-sm-wrap g-4">
                 <?php
                 include "connect.php";
-
                 $sql = mysqli_query($conn,"SELECT * FROM data_web");
-
                 foreach($sql as $value){
                     echo " 
                 <div class='card col-sm-12 col-md-6 mx-auto d-block' style='width: 15rem'>
@@ -136,7 +134,6 @@
             <div class="row g-5 pt-3 px-lg-5 py-5 justify-content-md-start">
                 <?php
                 include "connect.php";
-
                 $sql = mysqli_query($conn, "SELECT * FROM skill_data");
                 
                 foreach($sql as $value){

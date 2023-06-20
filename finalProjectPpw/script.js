@@ -31,20 +31,20 @@ document.addEventListener("DOMContentLoaded", function () {
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "comment.php", true);
     xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        var response = xhr.responseText;
-        if (response === "success") {
-          showAlert("Komentar berhasil disimpan.");
-          form.reset();
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          var response = xhr.responseText;
+          if (response === "success") {
+            swal.fire("Komentar berhasil disimpan.", "", "info");
+            form.reset();
+          } else {
+            swal.fire("Komentar gagal disimpan.", "", "error");
+          }
         } else {
-          showAlert("Komentar gagal disimpan.");
+          swal.fire("Terjadi kesalahan saat mengirim data.", "", "error");
         }
       }
     };
     xhr.send(formData);
   });
 });
-
-function showAlert(message) {
-  swal.fire(message, "", "info");
-}
