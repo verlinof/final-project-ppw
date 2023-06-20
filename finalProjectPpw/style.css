@@ -1,0 +1,81 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+.active {
+  background-color: #7ce0f4;
+  border-radius: 25px;
+}
+.fajri {
+  color: #7ce0f4;
+}
+.navbar {
+  height: 70px;
+}
+.navbar-brand {
+  font-weight: bold;
+  font-size: 25px;
+}
+.navbar-nav {
+  font-size: 18px;
+}
+.navbar-nav a:hover {
+  color: #7ce0f4;
+}
+.jumbotron {
+  padding: 2rem 1rem;
+}
+.about-me {
+  background-color: #7ce0f4;
+}
+.karakter-about {
+  width: 350px;
+  height: auto;
+}
+.text-about {
+  text-align: justify;
+  text-justify: distribute;
+}
+.card-img-top {
+  height: 150px;
+  width: auto;
+}
+.card-text {
+}
+.navbar-responsive {
+  width: 100%;
+}
+.skills {
+  background-color: #7ce0f4;
+}
+.lp-logo {
+  height: 85px;
+  width: auto;
+}
+.pl-description {
+  text-align: center;
+}
+.comment-input {
+  resize: none;
+  height: 200px;
+}
+.submit-btn {
+  height: 50px;
+  width: 100px;
+}
+
+.jumbotron,
+.projects {
+  background-image: linear-gradient(180deg, white, #b8eaf4);
+}
+
+.footer {
+  background-color: white;
+}
+.socmed-logo {
+  height: 25px;
+  width: auto;
+}
+
+.colored-toast.swal2-icon-info {
+  background-color: #3fc3ee !important;
+}
