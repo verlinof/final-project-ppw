@@ -1,6 +1,7 @@
 var first_load = document.getElementById("nav-about");
 first_load.classList.add("active");
 
+//Digunakan untuk mengaktifkan navbar ketika scrolling
 window.addEventListener("scroll", function () {
   var navbar = document.querySelector("nav");
   var svgElements = document.querySelectorAll("svg");

@@ -185,38 +185,36 @@
                             class="container-fluid comment-input border-1 rounded-4" required></textarea>
                     </div>
                     <input type="submit" name="submit" value="Submit" class="submit-btn" />
-                    <div>
-                        <p id="result"></p>
-                    </div>
                 </form>
             </div>
             <!-- akhir input komentar -->
             <!-- awal isi komentar -->
-            <div class="row py-3">
-                <h3 class="pb-3">Comment Section</h3>
-                <?php
+            <div id="list-comment" class="row py-3">
+                <h3 class="py-3">Comment Section</h3>
+                <swiper-container class="mySwiper pb-3" space-between="30" centered-slides="true" autoplay-delay="2500"
+                    autoplay-disable-on-interaction="false">
+                    <?php
                 include "connect.php";
                 $sql = mysqli_query($conn,"SELECT * FROM comments");
                 
                 foreach($sql as $value){
-                    echo "               
-                <div class='card bg-light mb-3 col-12'>
-                    <div class='card-header'>".$value['nama']."</div>
-                    <div class='card-body'>
-                        <p class='card-text'>
-                            ".$value['comment']."
-                        </p>
-                    </div>
-                </div>";
-                };
-                ?>
+                        echo "     
+                    <swiper-slide class='card rounded-3 p-2'>
+                        <div class='card-header fw-bold'>".$value['nama']."</div>
+                        <div class='card-body'>
+                            <p class='card-text'>".$value['comment']."</p>
+                        </div>
+                    </swiper-slide>";
+                    };
+                    ?>
+                </swiper-container>
             </div>
         </div>
     </section>
     <!-- Akhir Comments -->
 
     <!-- Awal footer -->
-    <div class="container-fluid footer shadow-lg">
+    <div class="container-fluid footer shadow-lg rounded-1 border border-1">
         <div class="container-md container-fluid d-flex">
             <div class="col py-4">
                 <h5 class="fw-bold" href="#">Verlino<span class="fajri">Fajri</span><span class="fw-light">

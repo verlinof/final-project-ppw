@@ -40,6 +40,8 @@ body {
   width: auto;
 }
 .card-text {
+  /* text-align: justify;
+  text-justify: inter-word; */
 }
 .navbar-responsive {
   width: 100%;
@@ -75,7 +77,13 @@ body {
   height: 25px;
   width: auto;
 }
-
+.card-header {
+  background-color: white;
+}
 .colored-toast.swal2-icon-info {
   background-color: #3fc3ee !important;
+}
+.mySwiper {
+  width: 100%;
+  height: auto;
 }
